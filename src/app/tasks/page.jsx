@@ -7,7 +7,7 @@ import Link from "next/link";
 
 
 const TasksData =async () => {
-    const tasks =await getTask();
+    const tasks =await getTask()
     return (
         <div className="container mx-auto py-8">
             <p>Tasks:{tasks.length}</p>
@@ -19,7 +19,7 @@ const TasksData =async () => {
                     tasks.map((task,ind)=> <TasksCard task={task} key={ind}></TasksCard>)
                 }
             </div>
-            <div>
+            <div className="flex justify-center items-center py-5">
                 <Button><Link href={"/tasks/newTasks"}>AddNewTasks</Link></Button>
             </div>
         </div>

@@ -1,6 +1,7 @@
 import { revalidatePath } from "next/cache";
 import { postTask, updateTask } from "./tasks";
 import { redirect } from "next/navigation";
+import { updatePost } from "./post";
 
 
 export const createATasks =async (formData)=>{
@@ -34,4 +35,25 @@ export const createAnotherTask = async(formData)=>{
         redirect("/tasks")
     }
     return res
+}
+
+export const createAPost= async(formData)=>{
+       "use server"
+    const taskName = formData.get('taskName')
+    const deadline = formData.get('deadline')
+    const priority = formData.get("priority");
+    const status = formData.get("status");
+    const assignedTo = formData.get("assignedTo");
+
+    const newPost = {taskName, deadline, priority, status, assignedTo}
+    console.log(newPost);
+
+    const res = await updatePost(newPost)
+
+
+    if(res.ok){
+        revalidatePath("/post")
+    }
+    return res
+    
 }

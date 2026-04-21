@@ -1,16 +1,20 @@
 import { createAnotherTask } from '@/lib/action';
-import { Input, Label, TextField,Select, ListBox, Button} from '@heroui/react';
+import { Input, Label, TextField,Select, ListBox, Button, Form} from '@heroui/react';
 import React from 'react';
 
 const NewTasks = () => {
     return (
         <div className='w-1/4 mx-auto py-5'>
-            <form action={createAnotherTask} className="flex flex-col gap-4">
-                <TextField className="w-full" name="title" type="text">
+            <Form action={createAnotherTask} className="flex flex-col gap-4">
+                <TextField
+                 isRequired
+                className="w-full" name="title" type="text">
                     <Label>Title</Label>
                     <Input placeholder="Enter your Title" />
                 </TextField>
-                <TextField className="w-full" name="description" type="text">
+                <TextField
+                isRequired
+                className="w-full" name="description" type="text">
                     <Label>Description</Label>
                     <Input placeholder="Write a Description" />
                 </TextField>
@@ -74,7 +78,7 @@ const NewTasks = () => {
                     </Button>
                     <Button slot='close' type="submit">Submit Task</Button>
            
-            </form>
+            </Form>
         </div>
     );
 };

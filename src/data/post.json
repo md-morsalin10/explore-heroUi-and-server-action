@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "taskName": "Complete Next.js Setup",
+    "priority": "High",
+    "status": "In Progress",
+    "deadline": "2026-04-22",
+    "isCompleted": false,
+    "tags": ["Coding", "Next.js"]
+  },
+  {
+    "id": 2,
+    "taskName": "Design Landing Page",
+    "priority": "Medium",
+    "status": "Pending",
+    "deadline": "2026-04-24",
+    "isCompleted": false,
+    "tags": ["Design", "Figma"]
+  },
+  {
+    "id": 3,
+    "taskName": "Deploy to Vercel",
+    "priority": "High",
+    "status": "Completed",
+    "deadline": "2026-04-20",
+    "isCompleted": true,
+    "tags": ["DevOps", "Vercel"]
+  },
+  {
+    "id": 4,
+    "taskName": "Review LinkedIn Post",
+    "priority": "Low",
+    "status": "Pending",
+    "deadline": "2026-04-21",
+    "isCompleted": false,
+    "tags": ["Marketing", "Social"]
+  },
+  {
+    "id": 5,
+    "taskName": "Fix Dashboard Bugs",
+    "priority": "High",
+    "status": "In Progress",
+    "deadline": "2026-04-25",
+    "isCompleted": false,
+    "tags": ["Debugging", "React"]
+  }
+]

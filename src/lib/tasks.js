@@ -1,6 +1,7 @@
 import tasks from "../data/tasks.json"
 
 
+
 export const getTask =async()=>{
     return tasks;
 }
@@ -17,3 +18,4 @@ export const updateTask =async(newTasks)=>{
     tasks.unshift(newTasks);
     return {ok:true,message:"Task updated successfully"};
 } 
+
