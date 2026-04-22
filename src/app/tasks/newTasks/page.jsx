@@ -4,7 +4,7 @@ import React from 'react';
 
 const NewTasks = () => {
     return (
-        <div className='w-1/4 mx-auto py-5'>
+        <div className='w-1/4 mx-auto py-4'>
             <Form action={createAnotherTask} className="flex flex-col gap-4">
                 <TextField
                  isRequired
